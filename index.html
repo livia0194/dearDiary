@@ -1,0 +1,108 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dear Diary</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <aside class="sidebar" aria-label="Navigation"></aside>
+  <div class="sidebar">
+    <h2 class="sidebar-heading">Stickers</h2>
+    <div class="sticker-panel">
+      <img src="assets/flower-1.svg" alt="Flower one sticker" class="sticker">
+      <img src="assets/flower-2.svg" alt="Flower two sticker" class="sticker">
+      <img src="assets/flower-3.svg" alt="Flower three sticker" class="sticker">
+      <img src="assets/flower-4.svg" alt="Flower  four sticker" class="sticker">
+    </div>
+ 
+  <h2 class="sidebar-heading">Pages</h2>
+  <div class="paper-chooser">
+    <div class="paper-chooser">
+      <!-- Ruled -->
+      <button class="paper-thumb" data-template="ruled" aria-label="Ruled">
+        <svg viewBox="0 0 80 50" width="100%" height="100%" role="img">
+          <rect width="80" height="50" fill="#fdf7ed"/>
+          <!-- horizontal rules -->
+          <g stroke="#c8b39a" stroke-width="1">
+            <line x1="0" y1="10" x2="80" y2="10"/>
+            <line x1="0" y1="20" x2="80" y2="20"/>
+            <line x1="0" y1="30" x2="80" y2="30"/>
+            <line x1="0" y1="40" x2="80" y2="40"/>
+          </g>
+        </svg>
+      </button>
+    
+      <!-- Grid -->
+      <button class="paper-thumb" data-template="grid" aria-label="Grid">
+        <svg viewBox="0 0 80 50" width="100%" height="100%" role="img">
+          <rect width="80" height="50" fill="#fdf7ed"/>
+          <defs>
+            <pattern id="g" width="10" height="10" patternUnits="userSpaceOnUse">
+              <path d="M10 0H0V10" fill="none" stroke="#c8b39a" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="80" height="50" fill="url(#g)"/>
+        </svg>
+      </button>
+    
+      <!-- Dotted -->
+      <button class="paper-thumb" data-template="dotted" aria-label="Dotted">
+        <svg viewBox="0 0 80 50" width="100%" height="100%" role="img">
+          <rect width="80" height="50" fill="#fdf7ed"/>
+          <defs>
+            <pattern id="d" width="6" height="6" patternUnits="userSpaceOnUse">
+              <circle cx="3" cy="3" r="0.8" fill="#c8b39a"/>
+            </pattern>
+          </defs>
+          <rect width="80" height="50" fill="url(#d)"/>
+        </svg>
+      </button>
+    
+      <!-- Plain -->
+      <button class="paper-thumb" data-template="plain" aria-label="Plain">
+        <svg viewBox="0 0 80 50" width="100%" height="100%" role="img">
+          <rect width="80" height="50" fill="#fdf7ed"/>
+        </svg>
+      </button>
+    </div>
+    
+  </div>
+</div>
+
+
+  <header class="topbar" role="banner">
+    <nav class="nav-left" aria-label="Editor menu">
+      <button type="button" class="nav-item">File</button>
+      <button type="button" class="nav-item">Edit</button>
+      <button type="button" class="nav-item">View</button>
+      <button type="button" class="nav-item">Insert</button>
+      <button type="button" class="nav-item">Help</button>
+    </nav>
+
+    <div class="nav-right">
+      <span aria-live="polite" class="save-dot" title="Saved">●</span>
+      <label for="doc-title" class="visually-hidden">Document title</label>
+      <input id="doc-title" class="doc-title" value="Untitled — 2025-10-27" />
+      <button type="button" class="export-btn" aria-disabled="true" title="Export coming in Month 2">Export</button>
+    </div>
+  </header>
+
+  <main class="wrap" role="main">
+    <h1>Good morning, how are you feeling today? 🪻</h1>
+
+    <label for="entry" class="visually-hidden">Journal entry</label>
+    <section
+      id="entry"
+      class="paper paper--ruled"
+      contenteditable="true"
+      role="textbox"
+      aria-multiline="true"
+      tabindex="0">
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
