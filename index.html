@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,90 +7,126 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <aside class="sidebar" aria-label="Navigation"></aside>
-  <div class="sidebar">
-    <h2 class="sidebar-heading">Stickers</h2>
-    <div class="sticker-panel">
-      <img src="assets/flower-1.svg" alt="Flower one sticker" class="sticker">
-      <img src="assets/flower-2.svg" alt="Flower two sticker" class="sticker">
-      <img src="assets/flower-3.svg" alt="Flower three sticker" class="sticker">
-      <img src="assets/flower-4.svg" alt="Flower  four sticker" class="sticker">
-    </div>
- 
-  <h2 class="sidebar-heading">Pages</h2>
-  <div class="paper-chooser">
-    <div class="paper-chooser">
-      <!-- Ruled -->
-      <button class="paper-thumb" data-template="ruled" aria-label="Ruled">
-        <svg viewBox="0 0 80 50" width="100%" height="100%" role="img">
-          <rect width="80" height="50" fill="#fdf7ed"/>
-          <!-- horizontal rules -->
-          <g stroke="#c8b39a" stroke-width="1">
-            <line x1="0" y1="10" x2="80" y2="10"/>
-            <line x1="0" y1="20" x2="80" y2="20"/>
-            <line x1="0" y1="30" x2="80" y2="30"/>
-            <line x1="0" y1="40" x2="80" y2="40"/>
-          </g>
-        </svg>
-      </button>
-    
-      <!-- Grid -->
-      <button class="paper-thumb" data-template="grid" aria-label="Grid">
-        <svg viewBox="0 0 80 50" width="100%" height="100%" role="img">
-          <rect width="80" height="50" fill="#fdf7ed"/>
-          <defs>
-            <pattern id="g" width="10" height="10" patternUnits="userSpaceOnUse">
-              <path d="M10 0H0V10" fill="none" stroke="#c8b39a" stroke-width="1"/>
-            </pattern>
-          </defs>
-          <rect width="80" height="50" fill="url(#g)"/>
-        </svg>
-      </button>
-    
-      <!-- Dotted -->
-      <button class="paper-thumb" data-template="dotted" aria-label="Dotted">
-        <svg viewBox="0 0 80 50" width="100%" height="100%" role="img">
-          <rect width="80" height="50" fill="#fdf7ed"/>
-          <defs>
-            <pattern id="d" width="6" height="6" patternUnits="userSpaceOnUse">
-              <circle cx="3" cy="3" r="0.8" fill="#c8b39a"/>
-            </pattern>
-          </defs>
-          <rect width="80" height="50" fill="url(#d)"/>
-        </svg>
-      </button>
-    
-      <!-- Plain -->
-      <button class="paper-thumb" data-template="plain" aria-label="Plain">
-        <svg viewBox="0 0 80 50" width="100%" height="100%" role="img">
-          <rect width="80" height="50" fill="#fdf7ed"/>
-        </svg>
-      </button>
-    </div>
-    
-  </div>
-</div>
 
+  <!-- Sidebar = stickers + page templates -->
+  <aside class="sidebar" aria-label="Stickers and page templates">
+    <div class="sidebar-inner">
+      <!-- Stickers header -->
+      <header class="sidebar-header">
+        <h2 class="sidebar-title">Stickers</h2>
+        <span class="sidebar-subtitle">Tap or drag onto your page</span>
+      </header>
 
+      <!-- Category tabs (visual only for now) -->
+      <nav class="sticker-tabs" aria-label="Sticker categories">
+        <button class="sticker-tab sticker-tab--active" type="button">All</button>
+        <button class="sticker-tab" type="button">Flowers</button>
+        <button class="sticker-tab" type="button">Objects</button>
+        <button class="sticker-tab" type="button">Food</button>
+      </nav>
+
+      <!-- Recently used row (static for now) -->
+      <section class="sticker-section">
+        <h3 class="sticker-section-title">Recently used</h3>
+        <div class="sticker-row">
+          <img src="assets/converse.svg" alt="Orange converse sticker" class="sticker">
+          <img src="assets/toteBag.svg" alt="Orange tote bag sticker" class="sticker">
+          <img src="assets/lampp.svg" alt="Street lamp sticker" class="sticker">
+        </div>
+      </section>
+
+      <!-- All stickers grid -->
+      <section class="sticker-section">
+        <h3 class="sticker-section-title">All stickers</h3>
+        <div class="sticker-grid">
+          <!-- Flowers -->
+          <img src="assets/flower-1.svg" alt="Flower sticker one" class="sticker">
+          <img src="assets/flower-2.svg" alt="Flower sticker two" class="sticker">
+          <img src="assets/flower-3.svg" alt="Flower sticker three" class="sticker">
+          <img src="assets/flower-4.svg" alt="Flower sticker four" class="sticker">
+
+          <!-- Objects -->
+          <img src="assets/converse.svg" alt="Orange converse sticker" class="sticker">
+          <img src="assets/toteBagg.png" alt="Strawberry tote bag sticker" class="sticker">
+          <img src="assets/toteBag.svg" alt="Orange tote bag sticker" class="sticker">
+          <img src="assets/lampp.svg" alt="Street lamp sticker" class="sticker">
+        </div>
+      </section>
+
+      <!-- Page templates (wrapped in its own section) -->
+      <section class="pages-section">
+        <h2 class="sidebar-heading">Pages</h2>
+        <div class="paper-chooser">
+          <!-- Ruled -->
+          <button class="paper-thumb" data-template="ruled" aria-label="Ruled paper">
+            <svg viewBox="0 0 80 50" width="100%" height="100%" role="img">
+              <rect width="80" height="50" fill="#fdf7ed"/>
+              <g stroke="#c8b39a" stroke-width="1">
+                <line x1="0" y1="10" x2="80" y2="10"/>
+                <line x1="0" y1="20" x2="80" y2="20"/>
+                <line x1="0" y1="30" x2="80" y2="30"/>
+                <line x1="0" y1="40" x2="80" y2="40"/>
+              </g>
+            </svg>
+          </button>
+
+          <!-- Grid -->
+          <button class="paper-thumb" data-template="grid" aria-label="Grid paper">
+            <svg viewBox="0 0 80 50" width="100%" height="100%" role="img">
+              <rect width="80" height="50" fill="#fdf7ed"/>
+              <defs>
+                <pattern id="g" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path d="M10 0H0V10" fill="none" stroke="#c8b39a" stroke-width="1"/>
+                </pattern>
+              </defs>
+              <rect width="80" height="50" fill="url(#g)"/>
+            </svg>
+          </button>
+
+          <!-- Dotted -->
+          <button class="paper-thumb" data-template="dotted" aria-label="Dotted paper">
+            <svg viewBox="0 0 80 50" width="100%" height="100%" role="img">
+              <rect width="80" height="50" fill="#fdf7ed"/>
+              <defs>
+                <pattern id="d" width="6" height="6" patternUnits="userSpaceOnUse">
+                  <circle cx="3" cy="3" r="0.8" fill="#c8b39a"/>
+                </pattern>
+              </defs>
+              <rect width="80" height="50" fill="url(#d)"/>
+            </svg>
+          </button>
+
+          <!-- Plain -->
+          <button class="paper-thumb" data-template="plain" aria-label="Plain paper">
+            <svg viewBox="0 0 80 50" width="100%" height="100%" role="img">
+              <rect width="80" height="50" fill="#fdf7ed"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </div>
+  </aside>
+
+  <!-- Topbar -->
   <header class="topbar" role="banner">
     <nav class="nav-left" aria-label="Editor menu">
-      <button type="button" class="nav-item">File</button>
-      <button type="button" class="nav-item">Edit</button>
-      <button type="button" class="nav-item">View</button>
-      <button type="button" class="nav-item">Insert</button>
+      <img src="assets/dearDiaryImage.png" alt="Orange converse sticker" class="logo">
+      <button type="button" class="nav-item">Templates</button>
+      <button type="button" class="nav-item">Memories</button>
+      <button type="button" class="nav-item">Add Image</button>
       <button type="button" class="nav-item">Help</button>
     </nav>
 
-    <div class="nav-right">
-      <span aria-live="polite" class="save-dot" title="Saved">●</span>
+    <div class="nav-right"> 
       <label for="doc-title" class="visually-hidden">Document title</label>
       <input id="doc-title" class="doc-title" value="Untitled — 2025-10-27" />
-      <button type="button" class="export-btn" aria-disabled="true" title="Export coming in Month 2">Export</button>
+      <button type="button" class="export-btn" aria-disabled="true" title="New Entry coming in Month 2">+</button>
     </div>
   </header>
 
+  <!-- Main writing area -->
   <main class="wrap" role="main">
-    <h1>Good morning, how are you feeling today? 🪻</h1>
+    <h1>Good morning, how are you feeling today?🧸</h1>
 
     <label for="entry" class="visually-hidden">Journal entry</label>
     <section
@@ -103,6 +138,7 @@
       tabindex="0">
     </section>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
